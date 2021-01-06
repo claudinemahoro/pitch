@@ -42,3 +42,22 @@ class User(UserMixin,db.Model):
     def __repr__(self):
         return f'User{self.username}'
 
+class Post(db.Model):
+
+    __tablename__='postes'
+    id=db.Column(db.Integer,primary_key=True)
+    title=db.Column(db.String(255),nullable = False)
+    post=db.Column(db.Text(),nullable = False)
+    category=db.Column(db.String(255),index=True)
+    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+     
+    comment=db.relationship('Comment',backref='post',lazy="dynamic")
+
+
+    def save_p(self):
+        db.session.add(self)
+        db.session.commit()
+    
+    def __repr__(self):
+        return f'Post {self.post}'
+
