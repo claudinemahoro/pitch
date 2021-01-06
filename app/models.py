@@ -67,15 +67,15 @@ class Comment(db.Model):
     comment=db.Column(db.Text())
     user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
     post_id=db.Column(db.Integer,db.ForeignKey('postes.id'))
-    article_id = db.Column(db.Integer,db.ForeignKey('articles.id'))
+    # article_id = db.Column(db.Integer,db.ForeignKey('articles.id'))
 
     def save_c(self):
         db.session.add(self)
         db.session.commit()
         
-    def delete_c(self):
-        db.session.delete(self)
-        db.session.commit()
+    # def delete_c(self):
+    #     db.session.delete(self)
+    #     db.session.commit()
 
     @classmethod
     def get_comments(cls,post_id):
@@ -86,3 +86,10 @@ class Comment(db.Model):
         return f'comment{self.comment}'
 
 
+class Quotes:
+    def __init__(self,author,quote):
+        '''
+        class of Quote
+        '''
+        self.author=author
+        self.quote=quote
