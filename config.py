@@ -2,8 +2,7 @@ import os
 
 class Config:
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://claudine:1998@localhost/newPitches_test'
-
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://claudine:1998@localhost/newpitches_test'
     SECRET_KEY = '002'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
@@ -27,10 +26,10 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://claudine:1998@localhost/newPitches_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://claudine:1998@localhost/newpitches_test'
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://claudine:1998@localhost/newPitches'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://claudine:1998@localhost/newpitches'
     DEBUG = True
 
 config_options = {
