@@ -9,34 +9,22 @@
 
 {% block content %}
 <div class="container">
-    <div class="landingspot">
-        <div class="textmiddle">
-            <h2 style="text-align: center ;font-family:'Berkshire Swash'">ONE MINUTE PITCH</h2>
-            <p><i>{{quotes.quote}}</i></p>
-            <p>___{{quotes.author}}</p>
-        </div>
-    </div>
-    <hr>
-  
-
-             
-            
+        
 <div class="container-fluid" id="particles-js">
-    <!-- <h2 class="text-center" id="posts"  style="color: black"><strong>POST</strong> </h2> -->
-    <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
-        <li class="nav-item">
-            <a id="cats" class="nav-link"  data-toggle="tab" href="#all" style="color: black"><strong>POST</strong></a>
-        </li>
-  
-
-    </ul>
+    <h2 class="text-center" id="all"  style="color: black"><strong>ONE MINUTE PITCH APP</strong></h2>
     <div class="tab-content">
         <div class="container tab-pane active" id="all"> <br>
-        {{macro.display(postes)}} </div>
+        {{macro.display(pickuplines)}}
+        {{ macro.display(interviewpitch) }}
+        {{ macro.display(productpitch) }}
+        {{ macro.display(promotionpitch) }}
+    </div>
+    
     </div>
    
 </div>
 
 </div>
-
+<hr>
+<footer style="text-align: center; background-color: #000;border-radius: 3px;height: 30px;color: gray;">@Claudine Mahoro 2020</footer>
 {% endblock %}
