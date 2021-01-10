@@ -15,13 +15,15 @@ This is an application that displays one minute Pitches entered by users.
 
 
 # Technologies used
+Mainly the technologies used are:
 * Python3.6
 * Flask
-* Html
+* Html/Css
 * Javascript
 
 # Link to heroku
 
+https://mapeacepitch.herokuapp.com/
 
 # License
 MIT License
